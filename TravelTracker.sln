@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelTracker", "TravelTracker.csproj", "{06273A4A-AE4F-45A4-8A1E-06360A641A95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06273A4A-AE4F-45A4-8A1E-06360A641A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06273A4A-AE4F-45A4-8A1E-06360A641A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06273A4A-AE4F-45A4-8A1E-06360A641A95}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06273A4A-AE4F-45A4-8A1E-06360A641A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06273A4A-AE4F-45A4-8A1E-06360A641A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06273A4A-AE4F-45A4-8A1E-06360A641A95}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {536565A2-1E26-4F53-969B-4B524F0A4327}
+	EndGlobalSection
+EndGlobal

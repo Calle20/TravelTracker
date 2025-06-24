@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TravelTracker.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TravelTracker"
+    Title="Travel Tracker"
+    Shell.NavBarHasShadow="True"
+    Shell.NavBarIsVisible="False"
+    Shell.TitleColor="{StaticResource White}"
+    >
+
+    <TabBar>
+        <ShellContent x:Name="MapsItem"
+                     Title="Map"
+                     Icon="map_icon.png" >
+        <local:MapPage/>
+        </ShellContent>
+        <ShellContent Title="Statistics"
+             Icon="statistics_icon.png" >
+            <local:Statistics/>
+        </ShellContent>
+        <ShellContent Title="New"
+              Icon="new_icon.png">
+        <local:New/>
+        </ShellContent>
+        <ShellContent Title="Search"
+                     Icon="search_icon.png">
+            <local:Search/>
+        </ShellContent>
+    </TabBar>
+
+</Shell>
