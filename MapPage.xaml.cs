@@ -21,10 +21,10 @@ namespace TravelTracker
         readonly MapControl _mapControl = new MapControl();
         static readonly Dictionary<string, MRect> CountryEnvelopes = new Dictionary<string, MRect>
         {
-            { "DE", new MRect(667510, 5984026, 1670585, 7269661) },   // Germany
-            { "FR", new MRect(-556597, 5181236, 1064703, 6665628) },  // France
-            { "US", new MRect(-13957016, 2881529, -7453304, 6449785) }, // USA
-            { "GB", new MRect(-842586, 6446275, 187058, 7820567) },   // United Kingdom
+            { "DE", new MRect(667510, 5984026, 1670585, 7269661) },
+            { "FR", new MRect(-556597, 5181236, 1064703, 6665628) },
+            { "US", new MRect(-13957016, 2881529, -7453304, 6449785) },
+            { "GB", new MRect(-842586, 6446275, 187058, 7820567) },
             { "IN", new MRect(7594069, 887586, 10886340, 4213004) },
         };
 
@@ -40,10 +40,9 @@ namespace TravelTracker
         {
             var map = new Map
             {
-                CRS = "EPSG:3857" // ensure WebMercator projection
+                CRS = "EPSG:3857"
             };
 
-            // OSM base layer
             var osmLayer = OpenStreetMap.CreateTileLayer();
             osmLayer.Name = "OSM Base";
             osmLayer.Opacity = 1;
@@ -54,7 +53,6 @@ namespace TravelTracker
             map.Navigator.ZoomLock = false;
             map.Navigator.RotationLock = true;
 
-            // 4) Zoom to user's country or world
             var countryCode = new RegionInfo(CultureInfo.CurrentCulture.Name).TwoLetterISORegionName.ToString();
             if (CountryEnvelopes.TryGetValue(countryCode, out var bbox))
             {
