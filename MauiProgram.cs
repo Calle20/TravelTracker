@@ -2,6 +2,7 @@
 using Mapsui.UI.Maui;
 using Microsoft.Extensions.Logging;
 using SkiaSharp.Views.Maui.Controls.Hosting;
+using TravelTracker.Database;
 
 namespace TravelTracker
 {
@@ -18,6 +19,8 @@ namespace TravelTracker
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            builder.Services.AddSingleton<PlaceItemDatabase>(); 
 
 #if DEBUG
     		builder.Logging.AddDebug();

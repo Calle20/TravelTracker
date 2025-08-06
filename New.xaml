@@ -5,8 +5,29 @@
              Title="New">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to New"
+            Text="Add new travel"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            FontSize="Large"/>
+        <Entry            
+            Placeholder="Name"/>
+        <Button
+            Text="Fill automatically"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnFillAutomaticallyClicked" />
+        <Entry
+            Placeholder="Longitude"
+            />
+        <Entry
+            Placeholder="Latidude"/>
+        <Entry
+            Placeholder="Country"/>
+
+        <Button
+            Text="Add New Travel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnAddNewTravelClicked" />
     </VerticalStackLayout>
 </ContentPage>
