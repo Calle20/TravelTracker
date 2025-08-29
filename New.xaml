@@ -10,20 +10,18 @@
             HorizontalOptions="Center" 
             FontSize="Large"/>
         <Entry            
-            Placeholder="Name"/>
-        <Button
-            Text="Fill automatically"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Clicked="OnFillAutomaticallyClicked" />
-        <Entry
-            Placeholder="Longitude"
-            />
-        <Entry
-            Placeholder="Latidude"/>
-        <Entry
-            Placeholder="Country"/>
-
+            Placeholder="Name"
+            TextChanged="OnTextChanged"
+            x:Name="StartStation"/>
+        
+        <CollectionView x:Name="SuggestionsList" SelectionMode="Single" SelectionChanged="OnItemSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding}" Padding="10" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
         <Button
             Text="Add New Travel"
             VerticalOptions="Center"

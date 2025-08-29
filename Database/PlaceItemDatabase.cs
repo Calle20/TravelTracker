@@ -18,22 +18,22 @@ namespace TravelTracker.Database
                 return;
 
             database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-            var result = await database.CreateTableAsync<PlaceItem>();
+            var result = await database.CreateTableAsync<Place>();
         }
 
-        public async Task<List<PlaceItem>> GetItemsAsync()
+        public async Task<List<Place>> GetItemsAsync()
         {
             await Init();
-            return await database.Table<PlaceItem>().ToListAsync();
+            return await database.Table<Place>().ToListAsync();
         }
 
-        public async Task<PlaceItem> GetItemAsync(int id)
+        public async Task<Place> GetItemAsync(int id)
         {
             await Init();
-            return await database.Table<PlaceItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return await database.Table<Place>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
-        public async Task<int> SaveItemAsync(PlaceItem item)
+        public async Task<int> SaveItemAsync(Place item)
         {
             await Init();
             if (item.ID != 0)
@@ -42,7 +42,7 @@ namespace TravelTracker.Database
                 return await database.InsertAsync(item);
         }
 
-        public async Task<int> DeleteItemAsync(PlaceItem item)
+        public async Task<int> DeleteItemAsync(Place item)
         {
             await Init();
             return await database.DeleteAsync(item);
